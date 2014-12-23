@@ -1,0 +1,68 @@
+<!--
+// Copyright 2014 Google Inc.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+// Author: Corey Goldfeder
+-->
+
+<style>
+  body { padding:10px }
+  h2 { color:#4d90fe; font-weight:bold }
+  button { 
+    color:white;
+    background:#4d90fe;
+    border:solid #3079ed 1px;
+    border-radius:4px;
+    font-size:13pt;
+    padding:5px;
+    font-weight:bold
+  }
+  .invisible { display:none }
+</style>
+<script>
+  function $(x) { return document.getElementById(x); }
+  function show(id) {$(id).className = ''; }
+  function hide(id) {$(id).className = 'invisible'; }
+  var runner = google.script.run
+    .withFailureHandler(function(error, message) {
+      alert('Error while ' + message + ': ' + error.message);
+    });    
+  function install() {
+    runner.withSuccessHandler(function() { 
+      hide('install');
+      show('update');
+      show('uninstall');
+    }).install({
+      numDays: $('numDays').value, 
+      markUnread: $('markUnread').checked, 
+      addUnsnoozed: $('addUnsnoozed').checked });
+  }
+  function uninstall() {
+    runner.withSuccessHandler(function() { 
+      show('install');
+      hide('update');
+      hide('uninstall');
+    }).uninstall();
+  }
+</script>
+<h2>Gmail Snooze</h2>
+Maintain <input id='numDays' value='<?= numDays ?>'> days of snooze labels <br>
+<input type='checkbox' <?= markUnread ? 'checked' : '' ?> id='markUnread'>
+Mark unread when unsnoozing<br>
+<input type='checkbox' <?= addUnsnoozed ? 'checked' : '' ?> id='addUnsnoozed'>
+Add unsnoozed label when unsnoozing<br>
+<button onclick='install()' id ='install' class='<?= installed ? 'invisible' : '' ?>'>Install</button>
+<button onclick='install()' id ='update' class='<?= installed ? '' : 'invisible' ?>'>Update</button> 
+<button onclick='uninstall()' id='uninstall' class='<?= installed ? '' : 'invisible' ?>'>Uninstall</button>
+
