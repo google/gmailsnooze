@@ -9,7 +9,7 @@ the script sets up, and an Apps Script time trigger that moves
 emails between the labels around midnight in your local time.
 
 The original Gmail Snooze blog post can be found here:
-http://gmailblog.blogspot.com/2011/07/gmail-snooze-with-apps-script.html
+http://gmailblog.blogspot.com/2011/07/gmail-snooze-with-apps-script.html.
 This update works the same way, but is more user friendly
 to install and manage, as it no longer relies on a
 spreadsheet or changing code to configure it. In fact, the
