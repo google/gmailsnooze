@@ -20,11 +20,6 @@ functionality themselves without touching the code, simply
 by clicking an install link. This makes it easier to deploy
 in large organizations.
 
-Gmail Snooze can be installed by installing the code or by
-piggybacking on another user who has installed the code. In 
-the latter case you will need the deployed script URL from
-the first user.
-
 
 TL;DR INSTALLATION
 ------------------
@@ -74,7 +69,14 @@ there is a link in the automated email you will receive from Apps Script
 at installation time. If you did a code installation you can also delete
 the project.
 
+CONTRIBUTING
+------------
+To contribute to this project you must sign a Google Contributor License Agreement
+for either [individuals](https://cla.developers.google.com/about/google-individual)
+or [corporations](https://developers.google.com/open-source/cla/corporate).
+
 AUTHOR
 ------
 Gmail Snooze was written by Corey Goldfeder at Google.
-This is not an official Google product.
+
+This is not an official Google product (experimental or otherwise), it is just code that happens to be owned by Google.
