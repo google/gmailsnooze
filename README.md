@@ -69,11 +69,6 @@ there is a link in the automated email you will receive from Apps Script
 at installation time. If you did a code installation you can also delete
 the project.
 
-CONTRIBUTING
-------------
-To contribute to this project you must sign a Google Contributor License Agreement
-for either [individuals](https://cla.developers.google.com/about/google-individual)
-or [corporations](https://developers.google.com/open-source/cla/corporate).
 
 AUTHOR
 ------
