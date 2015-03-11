@@ -1,4 +1,4 @@
-// Copyright 2014 Google Inc.
+// Copyright 2015 Google Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -81,7 +81,6 @@ function moveSnoozes() {
           // Move the threads into 'today’s' label
           labels[i - 1].addToThreads(page);
         } else {
-          
           // Unless it’s time to unsnooze it
           GmailApp.moveThreadsToInbox(page);
           if (config.markUnread) {
