@@ -23,8 +23,8 @@ in large organizations.
 
 TL;DR INSTALLATION
 ------------------
-There is a canonical copy of this script hosted in the 
-Chrome Web Store: <insert canonical script URL here>.
+There is a canonical copy of this script [hosted in the 
+Chrome Web Store](https://chrome.google.com/webstore/detail/gmail-snooze/ajhdhpnafihkepjialgccenokkljdlaf).
 It can be installed using the piggyback instructions
 below; basically, go to that URL and click OK and Install
 whenever prompted.
